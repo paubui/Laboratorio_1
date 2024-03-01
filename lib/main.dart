@@ -41,18 +41,20 @@ class MyHomePage extends StatelessWidget {
     var texto = appState.current;   
 
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center, 
-        children: [
-          Text('Bienvenid@ a este lab'),
-          BigCard(pair: texto),
-           ElevatedButton(
-            onPressed: () {
-              appState.getNext();
-            },
-            child: Text('Next'),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, 
+          children: [
+            Text('Bienvenid@ a este lab'),
+            BigCard(pair: texto),
+             ElevatedButton(
+              onPressed: () {
+                appState.getNext();
+              },
+              child: Text('Next'),
+            ),
+          ],
+        ),
       ),
     );
   }
